@@ -1,1 +1,31 @@
+name: Build
 
+on:
+  push:
+    branches: [master]
+    tags: ['*']
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: devkitpro/devkita64:latest
+
+    steps:
+      - name: Checkout (with submodules)
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Mark workspace as a safe git directory
+        run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
+
+      - name: Build and assemble release tree
+        run: make all
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: sys-con-cathery-${{ github.sha }}
+          path: out/
+          if-no-files-found: error
