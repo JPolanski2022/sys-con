@@ -1,4 +1,7 @@
 #pragma once
+#include <cstdint>
+#include <array>
+
 #include "SwitchUSBEndpoint.h"
 #include "IUSBInterface.h"
 #include <memory>

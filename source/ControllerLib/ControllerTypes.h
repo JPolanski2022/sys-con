@@ -1,4 +1,6 @@
 #pragma once
+#include <cstdint>
+
 
 enum ControllerType : uint8_t
 {

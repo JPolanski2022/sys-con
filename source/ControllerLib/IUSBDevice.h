@@ -1,4 +1,6 @@
 #pragma once
+#include <cstdint>
+
 #include <cstdio>
 #include "Result.h"
 #include "IUSBInterface.h"

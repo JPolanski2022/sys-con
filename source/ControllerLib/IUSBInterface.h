@@ -1,4 +1,7 @@
 #pragma once
+#include <cstdint>
+#include <array>
+
 #include "Result.h"
 #include "IUSBEndpoint.h"
 #include <memory>

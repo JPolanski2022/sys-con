@@ -1,4 +1,7 @@
 #pragma once
+#include <memory>
+#include <vector>
+
 
 #include "IController.h"
 #include "Xbox360Controller.h"

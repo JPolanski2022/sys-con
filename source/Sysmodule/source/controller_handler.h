@@ -1,4 +1,7 @@
 #pragma once
+#include <memory>
+#include <vector>
+
 
 #include "ControllerHelpers.h"
 #include "SwitchVirtualGamepadHandler.h"

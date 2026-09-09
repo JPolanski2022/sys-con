@@ -1,4 +1,6 @@
 #pragma once
+#include <cstdint>
+
 #include "IUSBDevice.h"
 #include "ControllerTypes.h"
 #include "ControllerConfig.h"

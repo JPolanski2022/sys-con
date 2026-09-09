@@ -1,4 +1,6 @@
 #pragma once
+#include <memory>
+
 
 #include "switch.h"
 #include "IController.h"

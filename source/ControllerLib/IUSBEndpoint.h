@@ -1,4 +1,6 @@
 #pragma once
+#include <cstdint>
+
 #include "Result.h"
 #include <cstddef>
 
