@@ -32,6 +32,15 @@ static constexpr uint8_t xboxone_pdp_init1[] = {
 static constexpr uint8_t xboxone_pdp_init2[] = {
     0x06, 0x20, 0x00, 0x02, 0x01, 0x00};
 
+static constexpr uint8_t xboxone_tb_led_on[] = {
+    0x0a, 0x20, 0x02, 0x03, 0x00, 0x01, 0x14};
+
+static constexpr uint8_t xboxone_tb_auth0[] = {
+    0x06, 0xa0, 0x03, 0x00, 0x92, 0x02};
+
+static constexpr uint8_t xboxone_tb_auth[] = {
+    0x06, 0x20, 0x04, 0x02, 0x01, 0x00};
+
 static constexpr uint8_t xboxone_rumblebegin_init[] = {
     0x09, 0x00, 0x00, 0x09, 0x00, 0x0F, 0x00, 0x00,
     0x1D, 0x1D, 0xFF, 0x00, 0x00};
@@ -55,6 +64,9 @@ static constexpr VendorProductPacket init_packets[]{
     {0x0000, 0x0000, xboxone_test_init1, sizeof(xboxone_test_init1)},
 
     {0x0000, 0x0000, xboxone_fw2015_init, sizeof(xboxone_fw2015_init)},
+    {0x10f5, 0x0000, xboxone_tb_led_on, sizeof(xboxone_tb_led_on)},
+    {0x10f5, 0x0000, xboxone_tb_auth0, sizeof(xboxone_tb_auth0)},
+    {0x10f5, 0x0000, xboxone_tb_auth, sizeof(xboxone_tb_auth)},
     {0x0e6f, 0x0000, xboxone_pdp_init1, sizeof(xboxone_pdp_init1)},
     {0x0e6f, 0x0000, xboxone_pdp_init2, sizeof(xboxone_pdp_init2)},
     {0x24c6, 0x0000, xboxone_rumblebegin_init, sizeof(xboxone_rumblebegin_init)},
