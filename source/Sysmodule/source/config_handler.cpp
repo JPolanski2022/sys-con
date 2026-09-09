@@ -28,7 +28,7 @@ namespace syscon::config
 
         bool is_config_changed_check_thread_running = false;
 
-        constexpr std::array keyNames{
+        constexpr std::array<const char *, 22> keyNames{
             "DEFAULT",
             "NONE",
             "FACE_UP",
