@@ -155,6 +155,13 @@ Result XboxOneController::OpenInterfaces()
                 }
             }
         }
+
+        /* We only ever use one in pipe and one out pipe. Any further interface
+           would be acquired (usbHsAcquireUsbIf) and then never used, wasting a
+           usb:hs interface slot. Those slots are limited, so stop as soon as we
+           have what we need - it lets more controllers connect at once. */
+        if (m_inPipe && m_outPipe)
+            break;
     }
 
     if (!m_inPipe || !m_outPipe)
